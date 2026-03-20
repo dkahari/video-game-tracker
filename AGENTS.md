@@ -36,6 +36,7 @@ Use this default flow unless the user asks for something smaller or faster:
 The following files should be treated as living references:
 
 - `Project_Start.md`: original project prompt and initial scope
+- `docs/README.md`: index of the docs folder and when each project doc should be used or updated
 - `docs/architecture.md`: current architectural direction
 - `docs/ticket-tracker.md`: current, upcoming, and completed work
 - `docs/decision-log.md`: important technical decisions and rationale

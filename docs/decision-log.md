@@ -15,6 +15,20 @@ Copy this format for new entries:
 - Follow-up:
 ```
 
+## 2026-03-17 - Share API contracts but keep internal models separate
+
+- Context: While exploring a layered architecture for the `library` context, the project needed a clear rule for how frontend and backend type sharing should work in a single repo.
+- Decision: Use `shared/contracts/` for transport-level request and response DTOs, allow both frontend and backend presentation code to import those contracts, and keep frontend view models plus backend domain and persistence models separate.
+- Why: This preserves an intentional API contract without coupling the frontend to backend source layout or leaking backend internals across the boundary.
+- Follow-up: Start with `shared/contracts/library.ts` when the `library` context is implemented and avoid direct frontend imports from backend folders.
+
+## 2026-03-17 - Use a library-first layered architecture for the MVP
+
+- Context: The project started with a simpler feature-based frontend direction, but the architecture discussion introduced a layered and bounded-context approach that the MVP can still benefit from if applied selectively.
+- Decision: Treat `library` as the first real bounded context, organize the frontend around `app`, `contexts`, and `shared`, and use layered backend-oriented language for `library` without fully scaffolding the other contexts yet.
+- Why: This gives the project cleaner boundaries and a better long-term shape while keeping the MVP focused and avoiding architecture for architecture's sake.
+- Follow-up: Apply the pattern first in `library`, keep `sessions`, `reviews`, and `sync` documented as future or stretch contexts, and only split deeper into layers or subfolders when the code earns it.
+
 ## 2026-03-16 - Create collaboration scaffolding before implementation
 
 - Context: The project is still in an early planning stage, and the goal is to use Codex intentionally rather than jumping straight into code.
