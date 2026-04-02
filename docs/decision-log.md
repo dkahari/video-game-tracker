@@ -15,6 +15,13 @@ Copy this format for new entries:
 - Follow-up:
 ```
 
+## 2026-03-23 - Retire the Frame0 rectangle workaround
+
+- Context: The project had been using a hybrid Frame0 workflow because earlier testing showed MCP `create_rectangle` returning `Box` shapes that were harder to edit than native `Rectangle` shapes.
+- Decision: Stop recommending the manual rectangle replacement workflow and use `create_rectangle` directly as the default wireframing path.
+- Why: A live validation on 2026-03-23 confirmed that `create_rectangle` now returns `Rectangle`, which removes the main reason for the workaround and simplifies wireframe generation.
+- Follow-up: Keep the Frame0 workflow doc aligned with current tool behavior and re-test with a disposable page if rectangle behavior appears to regress.
+
 ## 2026-03-17 - Share API contracts but keep internal models separate
 
 - Context: While exploring a layered architecture for the `library` context, the project needed a clear rule for how frontend and backend type sharing should work in a single repo.

@@ -40,6 +40,8 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
+dist/
+dist-ssr/
 
 # TypeScript v1 declaration files
 typings/
@@ -52,6 +54,7 @@ typings/
 
 # Optional eslint cache
 .eslintcache
+*.local
 
 # Optional REPL history
 .node_repl_history
@@ -77,6 +80,17 @@ typings/
 
 # vuepress build output
 .vuepress/dist
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
 # Serverless directories
 .serverless/

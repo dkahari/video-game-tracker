@@ -4,7 +4,7 @@ Video Game Tracker is a personal Progressive Web App for tracking games you have
 
 ## Project Status
 
-Planning and architecture are currently in progress. The implementation setup has not started yet.
+Project initialization is complete. The repo now has a working Vue 3 + TypeScript + Vite app scaffold, and the next setup tickets are Vuetify, the shared app shell, and router wiring.
 
 ## Planned Stack
 
@@ -37,4 +37,11 @@ Planning and architecture are currently in progress. The implementation setup ha
 ## Notes
 
 - Jira is the source of truth for ticket management.
-- Repo docs are being used to capture architecture, planning, and working agreements before implementation begins.
+- Repo docs are being used to capture architecture, planning, and working agreements alongside implementation.
+
+## Local Setup
+
+1. Install dependencies with `npm install`
+2. Start the dev server with `npm run dev`
+3. Build the project with `npm run build`
+4. Run lint checks with `npm run lint`
